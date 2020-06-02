@@ -1,0 +1,35 @@
+type是大类型，可以输入Toast(临时显示消息)或者Dialog(弹窗)
+每个大类型下有对应的四个小类型：
+
+Toast：success(成功),cancel(失败),ban(禁止),text(纯文本)
+
+Dialog：alert(弹窗),confirm(是否确认),prompt(输入框对话框),login(登录框对话框)
+选择Toast可更改的参数：
+
+	fontColor			自定义文字颜色
+	backgroundColor		自定义背景颜色
+	fontCont			自定义文字
+	iconColor			自定义icon图标颜色
+	divWidth			自定义宽度
+	divHeight			自定义高度
+	divLeft			自定义盒子的left值
+	divTop			自定义盒子的top值
+	borderRadius		自定义盒子的圆角边框
+	timer			盒子的消失时间
+	callback			自定义回调函数
+
+Dialog弹窗可以点击实现移动
+选择Dialog可更改的参数：
+	fontCont			自定义文字内容
+	btn_cancel		点击确认之后的回调函数
+	btn_confirm		点击取消之后的回调函数
+	title			用户自定义标题
+	input_box			自定义输入框和登录框的内容
+	input_password		自定义登录框的密码
+例：	var obj = {
+		type:"Toast",
+		coverType:"success",
+		fontColor:"#fff",
+		backgroundColor:"#fff",
+	}
+	var dialog = new Dialog_box(obj);

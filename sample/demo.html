@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				font-size: 12px;
+			}
+			#display{
+				width: 80%;
+				position: absolute;
+				left: 50%;
+				top: 45%;
+				transform: translate(-50%,-50%);
+				background: #fff;
+				border-radius: 10px;
+				text-align: center;
+				color: #fff;
+				z-index: 999;
+				opacity: 0;
+			}
+			#display .display_hd{
+				padding: 1.6rem 2.0rem 0.6rem 2rem;
+				text-align: center;
+				color: #000;
+			}
+			#display .display_hd strong{
+				font-weight: 400;
+				font-size: 1.5rem;
+			}
+			#display .display_hb{
+				font-size: 1.25rem;
+				padding: 0 2rem 1rem 2rem;
+				color: #fff;
+				line-height: 1.3;
+				color: #999;
+				min-height: 3.333333rem;
+			}
+			#display .display_hb .display_hb_text{
+				color: #999;
+			}
+			#display .display_hb input{
+				width: 80%;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				margin-top: 0.833333rem;
+				font-size: inherit;
+				outline: 0;
+				background-color: transparent;
+				line-height: 1.47058824;
+				padding: 0.333333rem 0.5rem;
+			}
+			#display .display_ft{
+				font-size: 1.5rem;
+				line-height: 4rem;
+				border-top: 1px solid #d5d5d6;
+				display: flex;
+				flex-direction: row;
+			}
+			#display .display_ft a{
+				flex: 1;
+				display: block;
+				color: #3cc51f;
+				text-decoration: none;
+			}
+			#display .display_ft a.cancel{
+				border-right:1px solid #D5D5D6;
+				color:#5f646e;
+			}
+			#Toast{
+				opacity: 0;
+				position: fixed;
+				z-index: 999;
+				left: 50%;
+				top: 45%;
+				background: hsla(0,0%,7%,.7);
+				transform: translate(-50%,-50%);
+				border-radius: 0.416666rem;
+				color: #fff;
+				width: 10.083333rem;
+				height: 10.083333rem;
+				text-align: center;
+				transition:.2s;
+			}
+			#Toast i{
+				margin: 1.833333rem 0 0;
+				display: block;
+				margin-bottom: 0.5rem;
+				font-size: 4.583333rem;
+				color: #fff;
+			}
+			#Toast p{
+				font-size: 1.333333rem;
+			}
+			#btn{
+				width: 16.666666rem;
+				height:4.166666rem;
+				border-radius: 0.833333rem;
+				margin: 0 auto;
+				display: block;
+				background: #1aad19;
+				color:#fff;
+				font-size: 1.5rem;
+				outline: none;
+			}
+			#bck{
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: rgba(0,0,0,.6);
+				width: 100%;
+				height: 100%;
+				transition-duration: .3s;
+				/* display: none; */
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="请点击" />
+<!-- 		<div id="bck">
+			<div id="display">
+				<div class="display_hd">
+					<strong>提示</strong>
+				</div>
+				<div class="display_hb">
+					<p class="display_hb_text">自定义的消息内容</p>
+					<input type="text" name="" id="" value="" class="display_hb_input" placeholder="输入用户名"/>
+					<input type="text" name="" id="" value="" class="display_hb_password" placeholder="输入密码"/>
+				</div>
+				<div class="display_ft">
+					<a href="#" class="cancel">取消</a>
+					<a href="#" class="confirm">确定</a>
+				</div>
+			</div>
+		</div> -->
+<!-- 		<div id="Toast">
+			<i class="iconfont icon-chenggong"></i>
+			<p></p>
+		</div> -->
+	</body>
+</html>
+<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../src/dialog_box.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		$("#btn").on("click",function(){
+			var dialog = new Dialog_box({
+				type:"Dialog",
+				coverType:"alert",
+				callback:function(){
+					console.log(111);
+				}
+			});
+		})
+</script>
